@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {DataService} from '../services/data.service';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'blog',
@@ -19,6 +19,7 @@ ngOnInit(): void {
 
   getAll(){
        this.service.getAll().subscribe(response => {
+       console.log(response);
          this.items$ = response;
      });
   }
